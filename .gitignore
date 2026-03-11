@@ -3,9 +3,9 @@
 .obsidian/workspace.json
 .obsidian/workspaces.json
 
-# Obsidian Cache
+# Obsidian Cache & Plugin-Code (wird lokal installiert)
 .obsidian/cache
-.obsidian/plugins/obsidian-git/data.json
+.obsidian/plugins/
 
 # Betriebssystem
 .DS_Store
@@ -15,6 +15,9 @@ desktop.ini
 # Temporäre Dateien
 *.tmp
 *.bak
+
+# Sync-Log
+.sync-log.txt
 
 # Claude (AI-Assistent Konfiguration - optional entfernen)
 .claude/
