@@ -1,0 +1,20 @@
+# Obsidian persönliche Einstellungen
+.obsidian/workspace
+.obsidian/workspace.json
+.obsidian/workspaces.json
+
+# Obsidian Cache
+.obsidian/cache
+.obsidian/plugins/obsidian-git/data.json
+
+# Betriebssystem
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporäre Dateien
+*.tmp
+*.bak
+
+# Claude (AI-Assistent Konfiguration - optional entfernen)
+.claude/
