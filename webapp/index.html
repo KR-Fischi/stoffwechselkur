@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🥗 Stoffwechselrezepte</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <h1>🥗 Stoffwechselrezepte</h1>
+      <p>Rezepte für Diät- und Stabi-Phase</p>
+    </div>
+    <div class="search-wrap">
+      <input type="text" id="search" placeholder="🔍 Rezept suchen...">
+    </div>
+  </header>
+
+  <div class="layout">
+
+    <aside class="sidebar">
+
+      <div class="filter-card">
+        <h3>Phase</h3>
+        <label class="filter-label">
+          <input type="checkbox" name="phase" value="diät" checked>
+          <span class="badge diät">Diätphase</span>
+        </label>
+        <label class="filter-label">
+          <input type="checkbox" name="phase" value="stabi" checked>
+          <span class="badge stabi">Stabi-Phase</span>
+        </label>
+      </div>
+
+      <div class="filter-card">
+        <h3>Kategorie</h3>
+        <label class="filter-label">
+          <input type="checkbox" name="kategorie" value="vegetarisch" checked>
+          🥦 Vegetarisch
+        </label>
+        <label class="filter-label">
+          <input type="checkbox" name="kategorie" value="vegan" checked>
+          🌱 Vegan
+        </label>
+        <label class="filter-label">
+          <input type="checkbox" name="kategorie" value="fleisch" checked>
+          🥩 Fleisch
+        </label>
+      </div>
+
+      <div class="filter-card">
+        <h3>Zutaten die ich habe</h3>
+        <p class="filter-hint">Zutaten auswählen → passende Rezepte sehen</p>
+        <div id="ingredients-filter"></div>
+      </div>
+
+    </aside>
+
+    <main>
+      <div class="results-header">
+        <span id="recipe-count"></span>
+      </div>
+      <div id="loading" class="loading">
+        <div class="spinner"></div>
+        <p>Rezepte werden geladen…</p>
+      </div>
+      <div id="recipe-grid" class="recipe-grid hidden"></div>
+      <div id="error-msg" class="error hidden"></div>
+    </main>
+
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="close-modal" aria-label="Schließen">✕</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
